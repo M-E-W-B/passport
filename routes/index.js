@@ -6,13 +6,15 @@ const User = require("../models/user");
 module.exports = app => {
   // api routes
   app.post("/signup", (req, res, next) => {
-    const obj = pick(req.body, [
-      "firstName",
-      "lastName",
-      "password",
-      "phoneNumber",
-      "email"
-    ]);
+    const { firstName, lastName, password, phoneNumber, email } = req.body;
+
+    const obj = {
+      firstName,
+      lastName,
+      password,
+      phoneNumber,
+      email
+    };
 
     if (!obj.password) return next(new Error("Password is required!"));
 
@@ -43,14 +45,18 @@ module.exports = app => {
 
   // view routes
   app.get("/", function(req, res) {
-    res.render("home", { user: req.user });
+    res.render("./pages/home", { user: req.user });
   });
 
   app.get("/login", function(req, res) {
-    res.render("login");
+    res.render("./pages/login");
+  });
+
+  app.get("/signup", function(req, res) {
+    res.render("./pages/signup");
   });
 
   app.get("/profile", ensureLoggedIn(), function(req, res) {
-    res.render("profile", { user: req.user });
+    res.render("./pages/profile", { user: req.user });
   });
 };

@@ -1,0 +1,11 @@
+{
+  "secret": "what's the rumpus",
+  "database": {
+    "url": "mongodb://localhost:27017/passport-local",
+    "options": {
+      "autoIndex": false,
+      "poolSize": 10,
+      "bufferMaxEntries": 0
+    }
+  }
+}
