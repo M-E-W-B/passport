@@ -4,18 +4,14 @@
   "description": "passport.js local strategy",
   "main": "index.js",
   "scripts": {
+    "start": "NODE_ENV=dev nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/M-E-W-B/passport.git"
   },
-  "keywords": [
-    "passportjs",
-    "authentication",
-    "expressjs",
-    "nodejs"
-  ],
+  "keywords": ["passportjs", "authentication", "expressjs", "nodejs"],
   "author": "kshirish",
   "license": "MIT",
   "bugs": {
@@ -23,6 +19,7 @@
   },
   "homepage": "https://github.com/M-E-W-B/passport#readme",
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.2",
     "connect-ensure-login": "^0.1.1",
     "cookie-parser": "^1.4.3",

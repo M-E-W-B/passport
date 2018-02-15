@@ -1,27 +1,30 @@
 const express = require("express");
-const methodOverride = require("method-override");
+const session = require("express-session");
 const bodyParser = require("body-parser");
+const cookieParser = require("cookie-parser");
 const config = require("./config");
-
+const { passport } = require("./utils");
+const routes = require("./routes");
 const app = express();
-const router = express.Router();
 
+app.set("view engine", "ejs");
+
+app.use(cookieParser());
 app.use(bodyParser.json()); // parse application/json
 app.use(bodyParser.urlencoded({ extended: true })); // parse application/x-www-form-urlencoded
-app.use(methodOverride("X-HTTP-Method-Override")); // simulate PUT and DELETE
-app.use("/api/v1", router);
+app.use(
+  session({ secret: config.secret, resave: false, saveUninitialized: false })
+);
 
-require("./routes/unauthenticated")(router);
+// passport configuration and middleware
+passport(app);
+// routes
+routes(app);
 
-if (process.env.NODE_ENV === "dev") require("./middlewares")(router);
-
-require("./routes")(router);
-
+// error handler
 app.use((err, req, res, next) => {
-  if (process.env.NODE_ENV === "dev") {
-    console.error(err.stack);
-    res.json({ message: err.message });
-  } else res.json(Object.keys(err).length ? err : { message: err.message });
+  console.error(err.stack);
+  res.json({ message: err.message });
 });
 
 module.exports = app;

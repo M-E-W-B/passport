@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <% include ../partials/head %>
+  </head>
+<body>
+  <form action="/signup" method="POST">
+    <div>
+      <label>Email:</label>
+    	<input type="email" name="email" placeholder="Email" required/> <br>
+  	</div>
+  	<div>
+    	<label>First Name:</label>
+    	<input type="text" name="firstName" placeholder="First Name" required/><br>
+  	</div>
+    <div>
+    	<label>Last Name:</label>
+    	<input type="text" name="lastName" placeholder="Last Name"/><br>
+  	</div>
+  	<div>
+      <label>Password:</label>
+    	<input type="password" min="6" max="20" name="password" placeholder="Password" title="Only 6 to 20 characters allowed" required/> <br>
+  	</div>
+    <div>
+      <label>Phone Number:</label>
+    	<input type="text" name="phoneNumber" pattern="[6789]\d{9}" placeholder="Phone Number" required/> <br>
+  	</div>
+  	<div>
+  	  <input type="submit" value="Register"/>
+  	</div>
+  </form>
+</body>
+</html>
