@@ -1,0 +1,41 @@
+{
+  "name": "passport-authentication",
+  "version": "1.0.0",
+  "description": "passport.js facebook strategy",
+  "main": "index.js",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.2",
+    "connect-ensure-login": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "mongoose": "^5.0.5",
+    "passport": "^0.4.0",
+    "passport-facebook": "^2.1.1",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "NODE_ENV=dev nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/M-E-W-B/passport-authentication.git"
+  },
+  "keywords": [
+    "passportjs",
+    "authentication",
+    "expressjs",
+    "nodejs",
+    "facebook"
+  ],
+  "author": "kshirish",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/M-E-W-B/passport-authentication/issues"
+  },
+  "homepage": "https://github.com/M-E-W-B/passport-authentication#readme"
+}

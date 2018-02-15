@@ -1,0 +1,16 @@
+{
+  "secret": "what's the rumpus!",
+  "database": {
+    "url": "mongodb://localhost:27017/passport-facebook",
+    "options": {
+      "autoIndex": false,
+      "poolSize": 10,
+      "bufferMaxEntries": 0
+    }
+  },
+  "clientID": "658088171029959",
+  "clientSecret": "ae4e3a4ca54e68419034c8cb8935a803",
+  "callbackURL": "http://localhost:8080/login/facebook/return",
+  "profileUrl":
+    "https://graph.facebook.com/v2.5/me?fields=first_name,last_name,email"
+}
