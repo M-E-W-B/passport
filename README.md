@@ -4,6 +4,7 @@
 
 Implementing all popular passport strategies
 
-1. [Passport Local](https://github.com/M-E-W-B/passport-authentication/tree/passport-local)
-2. [Passport Facebook](https://github.com/M-E-W-B/passport-authentication/tree/passport-facebook)
-3. [Passport Twitter](https://github.com/M-E-W-B/passport-authentication/tree/passport-twitter)
+1. [Local](https://github.com/M-E-W-B/passport-authentication/tree/passport-local)
+2. [Facebook](https://github.com/M-E-W-B/passport-authentication/tree/passport-facebook)
+3. [Twitter](https://github.com/M-E-W-B/passport-authentication/tree/passport-twitter)
+4. [Google](https://github.com/M-E-W-B/passport-authentication/tree/passport-google)
