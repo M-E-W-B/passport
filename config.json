@@ -1,0 +1,14 @@
+{
+  "secret": "what's the rumpus!",
+  "database": {
+    "url": "mongodb://localhost:27017/passport-twitter",
+    "options": {
+      "autoIndex": false,
+      "poolSize": 10,
+      "bufferMaxEntries": 0
+    }
+  },
+  "consumerKey": "KErvqcaBeGOOAgwzNTgunTULM",
+  "consumerSecret": "VpNkArEzYmzOk1w9IFaJycByRB4bnfdletrDepqWW7bIHApWlL",
+  "callbackURL": "http://localhost:8080/login/twitter/return"
+}
