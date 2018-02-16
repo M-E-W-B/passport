@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <% include ../partials/head %>
+  </head>
+<body>
+  <img src="<%= user.image %>" width="400" alt="profile photo">
+  <p>
+  Id: <%= user.id %><br>
+  Gender: <%= user.gender %><br>
+  Name: <%= user.displayName %><br>
+  Email: <%= user.email %><br>
+  </p>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "secret": "what's the rumpus!",
+  "database": {
+    "url": "mongodb://localhost:27017/passport-google",
+    "options": {
+      "autoIndex": false,
+      "poolSize": 10,
+      "bufferMaxEntries": 0
+    }
+  },
+  "clientID":
+    "713084171089-ulk534fr4s81p0aqmjb9f4m4dpom6u80.apps.googleusercontent.com",
+  "clientSecret": "BCKFd3X_RVeiZ5tCuzklF80b",
+  "callbackURL": "http://localhost:8080/login/google/return"
+}
