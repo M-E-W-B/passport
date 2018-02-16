@@ -11,6 +11,5 @@
   "clientID": "658088171029959",
   "clientSecret": "ae4e3a4ca54e68419034c8cb8935a803",
   "callbackURL": "http://localhost:8080/login/facebook/return",
-  "profileUrl":
-    "https://graph.facebook.com/v2.5/me?fields=first_name,last_name,email"
+  "profileFields": ["id", "displayName", "emails"]
 }

@@ -1,7 +1,12 @@
 const passport = require("passport");
 const { Strategy } = require("passport-facebook");
 const User = require("../models/user");
-const { clientID, clientSecret, callbackURL } = require("../config");
+const {
+  clientID,
+  clientSecret,
+  callbackURL,
+  profileFields
+} = require("../config");
 
 module.exports = app => {
   // The function must verify whether the user is valid. If yes, then set user object at `req.user
@@ -10,7 +15,8 @@ module.exports = app => {
       {
         clientID,
         clientSecret,
-        callbackURL
+        callbackURL,
+        profileFields
       },
       function(accessToken, refreshToken, profile, done) {
         // asynchronous
@@ -21,8 +27,8 @@ module.exports = app => {
               else {
                 const user = new User({
                   _id: profile.id,
-                  accessToken,
                   displayName: profile.displayName,
+                  profileUrl: profile.profileUrl,
                   email:
                     profile.emails instanceof Array
                       ? profile.emails[0].value

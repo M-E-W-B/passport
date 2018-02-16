@@ -5,7 +5,10 @@ const User = require("../models/user");
 
 module.exports = app => {
   // api routes
-  app.get("/login/facebook", passport.authenticate("facebook"));
+  app.get(
+    "/login/facebook",
+    passport.authenticate("facebook", { scope: ["public_profile", "email"] })
+  );
 
   app.get(
     "/login/facebook/return",
